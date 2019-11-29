@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/ToDoVkMiniApp/static/css/main.981f7211.chunk.css",
+    "main.js": "/ToDoVkMiniApp/static/js/main.712928c6.chunk.js",
+    "main.js.map": "/ToDoVkMiniApp/static/js/main.712928c6.chunk.js.map",
+    "runtime-main.js": "/ToDoVkMiniApp/static/js/runtime-main.d1c3b975.js",
+    "runtime-main.js.map": "/ToDoVkMiniApp/static/js/runtime-main.d1c3b975.js.map",
+    "static/css/2.4e89ce74.chunk.css": "/ToDoVkMiniApp/static/css/2.4e89ce74.chunk.css",
+    "static/js/2.555ade03.chunk.js": "/ToDoVkMiniApp/static/js/2.555ade03.chunk.js",
+    "static/js/2.555ade03.chunk.js.map": "/ToDoVkMiniApp/static/js/2.555ade03.chunk.js.map",
+    "index.html": "/ToDoVkMiniApp/index.html",
+    "precache-manifest.878e887b553b6011d17d29a5703fc2d0.js": "/ToDoVkMiniApp/precache-manifest.878e887b553b6011d17d29a5703fc2d0.js",
+    "service-worker.js": "/ToDoVkMiniApp/service-worker.js",
+    "static/css/2.4e89ce74.chunk.css.map": "/ToDoVkMiniApp/static/css/2.4e89ce74.chunk.css.map",
+    "static/css/main.981f7211.chunk.css.map": "/ToDoVkMiniApp/static/css/main.981f7211.chunk.css.map",
+    "static/media/persik.png": "/ToDoVkMiniApp/static/media/persik.4e1ec840.png"
+  }
+}

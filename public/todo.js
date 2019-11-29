@@ -1,23 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@AlexLmrv 
-1
-84Linda-Ikechukwu/Todo-App
- Code Issues 0 Pull requests 0 Actions Projects 0 Wiki Security Insights
-Todo-App/Js/todo2.js / 
-@Linda-Ikechukwu Linda-Ikechukwu fixed the clear button function
-e7951f3 on Jul 10, 2018
-97 lines (76 sloc)  2.6 KB
-  
-You're using code navigation to jump to definitions or references.
-Learn more or give us feedback
-//selecting dom elements for manipulation
 var input = document.querySelector("input[type = 'text']");
 var ul = document.querySelector("ul");
 var container = document.querySelector("div");

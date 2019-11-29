@@ -1,33 +1,116 @@
+Skip to content
+Search or jump to…
 
-function onPageLoaded() {
-    const input = document.querySelector("input[type='text']");
-    const ul = document.querySelector("ul.todos");
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@AlexLmrv 
+1
+84Linda-Ikechukwu/Todo-App
+ Code Issues 0 Pull requests 0 Actions Projects 0 Wiki Security Insights
+Todo-App/Js/todo2.js / 
+@Linda-Ikechukwu Linda-Ikechukwu fixed the clear button function
+e7951f3 on Jul 10, 2018
+97 lines (76 sloc)  2.6 KB
+  
+You're using code navigation to jump to definitions or references.
+Learn more or give us feedback
+//selecting dom elements for manipulation
+var input = document.querySelector("input[type = 'text']");
+var ul = document.querySelector("ul");
+var container = document.querySelector("div");
+var lists = document.querySelectorAll("li");
+var spans = document.getElementsByTagName("span");
+var pencil = document.querySelector("#pencil");
+var saveBtn = document.querySelector(".save");
+var clearBtn = document.querySelector(".clear");
+var tipsBtn = document.querySelector(".tipBtn");
+var closeBtn = document.querySelector(".closeBtn");
+var overlay = document.getElementById("overlay")
 
-    function createTodo() {
-        const li = document.createElement("li");
-        const textSpan = document.createElement("span");
-        textSpan.classList.add("todo-text");
-        const newTodo = input.value;
-        textSpan.append(newTodo);
 
-        const deleteBtn = document.createElement("span");
-        deleteBtn.classList.add("todo-trash");
-        const icon = document.createElement("i");
-        icon.classList.add("fas", "fa-trash-alt");
-        deleteBtn.appendChild(icon);
-
-        ul.appendChild(li).append(textSpan, deleteBtn);
-        input.value = "";
-        listenDeleteTodo(deleteBtn);
-    }
-
-    input.addEventListener("keypress", (keyPressed) => {
-        const keyEnter = 13;
-        if (keyPressed.which == keyEnter) {
-            createTodo();
-        }
+//function to delete todo if delete span is clicked.
+function deleteTodo(){
+  for(let span of spans){
+    span.addEventListener ("click",function (){
+      span.parentElement.remove();
+      event.stopPropagation();
     });
-    ul.addEventListener("click", onClickTodo);
+  }
 }
 
-document.addEventListener("DOMContentLoaded", onPageLoaded);
+//function to load todo if list is found in local storage.
+function loadTodo(){
+  if(localStorage.getItem('todoList')){
+    ul.innerHTML = localStorage.getItem('todoList');
+    deleteTodo();
+  }
+}
+
+//event listener for input to add new todo to the list.
+input.addEventListener("keypress",function(keyPressed){
+  if(keyPressed.which === 13){
+    //creating lists and span when enter is clicked
+    var li = document.createElement("li");
+    var spanElement = document.createElement("span");
+    var icon = document.createElement("i");
+        
+    var newTodo = this.value;
+    this.value = " " ;
+        
+    icon.classList.add('fas', 'fa-trash-alt');
+    spanElement.append(icon);
+    ul.appendChild(li).append(spanElement,newTodo);
+
+    deleteTodo();
+    
+    }
+    
+});
+
+// event listener to linethrough list if clicked
+ul.addEventListener('click', function(ev) {
+    if (ev.target.tagName === 'LI') {
+      ev.target.classList.toggle('checked');
+    }
+  },false
+);
+
+//hide input box,when pencil icon is clicked
+pencil.addEventListener('click', function(){
+  input.classList.toggle('display');
+});
+
+
+
+//save todolist state so user can access it later
+saveBtn.addEventListener('click',function(){
+  localStorage.setItem('todoList',ul.innerHTML );
+  
+});
+
+//clear all todo when clear button is clicked
+clearBtn.addEventListener('click', function(){
+  ul.innerHTML= "";
+  localStorage.removeItem('todoList',ul.innerHTML );
+});
+
+//display overlay when tips btn is clicked
+tipsBtn.addEventListener("click",function(){
+   overlay.style.height = "100%";
+});
+
+//close overlay when close btn is clicked
+closeBtn.addEventListener("click",function(e){
+  e.preventDefault;
+  overlay.style.height = "0";
+  
+})
+
+//delete todo
+deleteTodo();
+
+//load Todo
+loadTodo();

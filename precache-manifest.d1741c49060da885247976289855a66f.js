@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3e87f73bc3a955963df9e41ab4699a6c",
+    "revision": "0474da2af1ec7daf0e9fd40004c55cf0",
     "url": "/ToDoVkMiniApp/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ToDoVkMiniApp/static/css/2.4e89ce74.chunk.css"
   },
   {
-    "revision": "dfb6d5b69ca869327a9c",
+    "revision": "febde2a6c1cbfb4dfa6e",
     "url": "/ToDoVkMiniApp/static/css/main.981f7211.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ToDoVkMiniApp/static/js/2.555ade03.chunk.js"
   },
   {
-    "revision": "dfb6d5b69ca869327a9c",
-    "url": "/ToDoVkMiniApp/static/js/main.712928c6.chunk.js"
+    "revision": "febde2a6c1cbfb4dfa6e",
+    "url": "/ToDoVkMiniApp/static/js/main.f97e56aa.chunk.js"
   },
   {
     "revision": "7ce30d5222f5ab620045",
